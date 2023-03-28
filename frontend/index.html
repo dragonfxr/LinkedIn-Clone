@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>LurkForWork</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- You can add your styles and scripts here -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="styles/global.css"
+    />
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/sign-in/"
+    />
+    <link
+      href="bootstrap-5.3.0-alpha1-examples/assets/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
+
+  <body class="text-center">
+    <main class="form-signin w-100 m-auto" role="main">
+      <!-- Page 1: Front Page (haven't logged in) -->
+      <div id="user-logged-out">
+        <!-- Login page -->
+        <div id="page-login">
+          <img
+            class="mb-4"
+            src="./linkedIn.png"
+            alt=""
+            width="100"
+            height="80"
+          />
+          <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+          <div class="form-floating">
+            <input
+              type="email"
+              class="form-control"
+              id="login-email"
+              placeholder="name@example.com"
+            />
+            <label for="floatingInput">Email address</label>
+          </div>
+
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control"
+              id="login-password"
+              placeholder="Password"
+            />
+            <label for="floatingPassword">Password</label>
+          </div>
+          <!-- Sign in button -->
+          <button
+            class="w-100 btn btn-lg btn-primary"
+            type="submit"
+            id="login-button"
+          >
+            Sign in
+          </button>
+          <br /><br />
+          <!-- Registration button -->
+          <button
+            class="w-100 btn btn-lg btn-primary"
+            type="submit"
+            id="nav-register"
+          >
+            Not register yet?
+          </button>
+        </div>
+
+        <!-- Page 2: Register page -->
+        <div id="page-register" class="hide">
+          <img
+            class="mb-4"
+            src="./linkedIn.png"
+            alt=""
+            width="72"
+            height="57"
+          />
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="register-name"
+              placeholder="name"
+            />
+            <label for="floatingInput">Name</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="email"
+              class="form-control"
+              id="register-email"
+              placeholder="name@example.com"
+            />
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control"
+              id="register-password"
+              placeholder="pasword"
+            />
+            <label for="floatingInput">Password</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control"
+              id="confirm-password"
+              placeholder="pasword"
+            />
+            <label for="floatingInput">Confirm password</label>
+          </div>
+          <!-- Register button -->
+          <button
+            class="w-100 btn btn-lg btn-primary"
+            type="submit"
+            id="register-button"
+          >
+            Register
+          </button>
+          <br /><br />
+          <!-- Go back to login page button -->
+          <button
+            class="w-100 btn btn-lg btn-primary"
+            type="submit"
+            id="nav-login"
+          >
+            Already have an account!
+          </button>
+        </div>
+      </div>
+
+      <!-- Page 3: HOME: Already logged in -->
+      <div id="user-logged-in" class="hide">
+        <div id="job-data" class="container" style="font-size:large">
+          Welcome to home page!😁
+          <button id="add-jobs" class="btn btn-primary" type="submit">
+            New job</button
+          ><br />
+          <button class="view-my-profile btn btn-primary" type="submit" style="margin-bottom: 15px
+          ;">
+            View My Profile
+          </button>
+          <ul id="job-list" class="item"></ul>
+        </div>
+
+        <!-- Logout button -->
+        <button
+          class="w-100 btn btn-lg btn-primary logout-button"
+          type="submit"
+          style="position: fixed; bottom: 0; left: 0; right: 0"
+        >
+          Log out
+        </button>
+      </div>
+
+      <!-- Page 4: User Own Profile Page -->
+      <div id="user-profile-page" class="hide">
+        <div id="user-data">User Profile:</div>
+        <button id="edit-profile" class="btn btn-primary" type="submit">
+          Edit My Profile
+        </button>
+        <button id="edit-jobs-button" class="btn btn-primary" type="submit">
+          Update My Jobs
+        </button>
+        <div id="user-jobs" class="container">
+          <ul id="user-job-list" class="item"></ul >
+        </div>
+        <!-- Back to home page button -->
+        <button
+          class="w-100 btn btn-lg btn-primary back-to-login"
+          type="submit"
+        >
+          Go back to home Page
+        </button>
+        <br /><br />
+        <!-- Logout button -->
+        <button
+          class="w-100 btn btn-lg btn-primary logout-button"
+          type="submit"
+          style="position: fixed; bottom: 0; left: 0; right: 0"
+        >
+          Log out
+        </button>
+      </div>
+
+      <!-- Page 5: Page to add new jobs -->
+      <div id="add-jobs-page" class="hide">
+        <h2>Hi! Here to add a new job!</h2>
+        <button class="view-my-profile btn btn-primary" type="submit">
+          View My Profile
+        </button>
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="new-title"
+            placeholder="Job title"
+          />
+          <label for="floatingInput">Add Job Title*</label>
+        </div>
+
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="new-img"
+            placeholder="Image URL"
+          />
+          <label for="floatingInput">Add Image URL*</label>
+        </div>
+
+        <div>
+          <p>Specify Job Start Date:*</p>
+          <!-- TODO: CSS -->
+          <input type="date" name="date" id="new-date" />
+        </div>
+
+        <div>
+          <p>Specify Job Start Time:*</p>
+          <!-- TODO: CSS -->
+          <input type="time" name="time" id="new-time" />
+        </div>
+
+        <div class="form-floating">
+          <!-- TODO: change this to textArea -->
+          <input
+            type="text"
+            class="form-control"
+            id="new-description"
+            placeholder="Job description"
+          />
+          <label for="floatingInput">Add job Description*</label>
+        </div>
+
+        <button
+          id="submit-new-jobs"
+          class="w-100 btn btn-lg btn-primary"
+          type="submit"
+        >
+          Add the job
+        </button>
+        <br /><br />
+        <button
+          class="w-100 btn btn-lg btn-primary back-to-login"
+          type="submit"
+        >
+          Go back to home Page
+        </button>
+      </div>
+
+      <!-- Page 6: Page to edit one profile -->
+      <div id="edit-profile-page" class="hide">
+        <h2>Hi! Here to edit your own profile!</h2>
+        <p>
+          Note that by submitting this form, your profile will be overwritten.
+          It will only update defined fields provided. Any fields given that are
+          undefined will remain unchanged.
+        </p>
+        <div class="form-floating">
+          <input
+            type="email"
+            class="form-control"
+            id="edit-email"
+            placeholder="Job title"
+          />
+          <label for="floatingInput">New Email</label>
+        </div>
+
+        <div class="form-floating">
+          <input
+            type="password"
+            class="form-control"
+            id="edit-password"
+            placeholder="Password"
+          />
+          <label for="floatingInput">New Password</label>
+        </div>
+
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="edit-name"
+            placeholder="Name"
+          />
+          <label for="floatingInput">New Name</label>
+        </div>
+
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="edit-img"
+            placeholder="Image URL"
+          />
+          <label for="floatingInput">New Image</label>
+        </div>
+
+        <button
+          id="submit-edit-profile"
+          class="w-100 btn btn-lg btn-primary"
+          type="submit"
+        >
+          Update
+        </button>
+        <br /><br />
+        <button
+          class="w-100 btn btn-lg btn-primary back-to-login"
+          type="submit"
+        >
+          Go back to home Page
+        </button>
+      </div>
+
+      <!-- Page 7: Page to update jobs -->
+      <div id="update-job-page" class="hide">
+        <h2>Hi! Here to update jobs!</h2>
+        <div class="form-floating">
+          <input
+            type="number"
+            class="form-control"
+            id="update-job-id"
+            placeholder="Job ID"
+          />
+          <label for="floatingInput">New Job ID</label>
+        </div>
+
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="update-job-title"
+            placeholder="Title"
+          />
+          <label for="floatingInput">New Job Title</label>
+        </div>
+
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="update-job-img"
+            placeholder="Image"
+          />
+          <label for="floatingInput">New Job Image</label>
+        </div>
+
+        <div>
+          <p>Specify New Job Start Date:*</p>
+          <!-- TODO: CSS -->
+          <input type="date" name="date" id="update-job-date" />
+        </div>
+
+        <div>
+          <p>Specify New Job Start Time:*</p>
+          <!-- TODO: CSS -->
+          <input type="time" name="time" id="update-job-time" />
+        </div>
+
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="update-job-description"
+            placeholder="Description"
+          />
+          <label for="floatingInput">New Job Description</label>
+        </div>
+
+        <button
+          id="submit-update-job"
+          class="w-100 btn btn-lg btn-primary"
+          type="submit"
+        >
+          Update
+        </button>
+        <br /><br />
+        <button
+          class="w-100 btn btn-lg btn-primary back-to-login"
+          type="submit"
+        >
+          Go back to home Page
+        </button>
+      </div>
+
+      <!-- Page 8: Other User's Profile Page -->
+      <div id="other-user-profile-page" class="hide">
+        <div id="other-user-data" class="container">User Profile:</div>
+        <div id="other-user-jobs">
+          <ul id="other-user-job-list"></ul class="item">
+        </div>
+        <!-- Back to home page button -->
+        <button
+          class="w-100 btn btn-lg btn-primary back-to-login"
+          type="submit"
+        >
+          Go back to home Page
+        </button>
+        <br /><br />
+        <!-- Logout button -->
+        <button
+          class="w-100 btn btn-lg btn-primary logout-button"
+          type="submit"
+          style="position: fixed; bottom: 0; left: 0; right: 0"
+        >
+          Log out
+        </button>
+      </div>
+    </main>
+
+    <!-- error popup -->
+    <div id="error-popup" class="error-popup hide">
+      <div class="error-popup-content">
+        <p id="error-message"></p>
+        <button class="close-btn" id="close-btn">Close</button>
+      </div>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
