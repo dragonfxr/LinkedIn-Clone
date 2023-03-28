@@ -1,17 +1,9 @@
-# Assessment 3 - Vanilla JS: LurkForWork
+Vanilla JS: LurkForWork
 
 1. Background & Motivation
 2. The Task
 3. Getting Started
 4. Constraints & Assumptions
-5. Marking Criteria
-6. Originality of Work
-7. Submission
-8. Late Submission Policy
-
-## 0. Change Log
-
-13/03/2023 - Updated the description of the '/job/feed' endpoint in Swagger docs from 'all jobs' -> 'next 5 jobs'.
 
 ## 1. Background & Motivation
 
@@ -277,121 +269,5 @@ In this assignment, you are:
  * Allowed to build HTML elements and add CSS properties to the DOM via JavaScript. We expect this to be the most common way students build these pages.
  * Are strictly **not** allowed to use the `innerHTML` property of nodes/tags to set the inner HTML of an element. This has security vulnerabilities and is in general not best practice. Either statically add the HTML/CSS and manipulate it with JavaScript, or generate and build nodes/elements in JavaScript (just like in lectures/tutes/labs), or both. But don't set inner HTML. The use of any `innerHTML` will result in a 50% penalty of your mark.
 
-### 4.6. Async, Await, Promises
 
-You are strictly **not** allowed to use the `async` and `await` syntax in this assignment. You must use ES6 Promises. The use of any `async` or `await` will result in a 50% penalty of your mark.
 
-## 5. Marking Criteria
-
-Your assignment will be hand-marked by tutor(s) in the course according to the criteria below.
-
-Please note: When we test your UI we will use a pre-loaded database JSON that already has jobs and users and watches added to it. 
-
-<table>
-	<tr>
-		<th>Criteria</th>
-		<th>Weighting</th>
-		<th>Description</th>
-	</tr>
-	<tr>
-		<td>Compliance to task requirements</td>
-		<td>70%</td>
-		<td>
-			<ul>
-				<li>Each milestone specified a particular % of overall assignment (summing up to 70%). Implement those components as required to receive the marks.</li>
-        <li>You <b>MUST</b> update the <code>progress.csv</code> file in the root folder of this repository as you complete things partially or fully. The valid values are "NO", "PARTIAL", and "YES". Updating this is necessary so that your tutor knows what to focus on and what to avoid - giving them the best understanding of your work and provide you with marks you have earned.</li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td>Mobile Responsiveness</td>
-		<td>15%</td>
-		<td>
-			<ul>
-				<li>Your application is usable for desktop sizes generally, tablet sizes generally, and mobile sizes generally (down to 400px wide, 700px high).</li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td>Code Style</td>
-		<td>10%</td>
-		<td>
-			<ul>
-				<li>Your code is clean, well commented, with well-named variables, and is well laid out.</li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-		<td>Usability & Accessibility</td>
-		<td>5%</td>
-		<td>
-			<ul>
-				<li>Your application is usable and easy to navigate. No obvious usability issues or confusing layouts/flows.</li>
-				<li>Your application follows standard accessibility guidelines, such as use of alt tags, and colours that aren't inaccessible.</li>
-				<li>Describe any attempts you've made to improve the usability/accessibility in `usability.md`</li>
-			</ul>
-		</td>
-	</tr>
-	<tr>
-    <td>(Bonus Marks) Extra Features</td>
-    <td>5%</td>
-    <td>
-      <ul>
-        <li>Implementation of extra features that are not included in the spec.</li>
-        <li>Extra features should be non-trivial, have a clear justification for existing, and show either a form of technical, product, or creative flare.</li>
-        <li>Any extra features written down in `BONUS.md` in the project folder</li>
-        <li>Any bonus marks that extend your ass3 mark above 100% will bleed into other assignment marks, but cannot contribute outside of the 80% of the course that is allocated for assignment marks</li>
-        <li><b>Expectations placed on solo groups will be half of that of pairs to achieve the same mark.</b></li>
-      </ul>
-    </td>
-  </tr>
-</table>
-
-## 6. Originality of Work
-
-The work you submit must be your own work. Submission of work partially or completely derived from
-any other person or jointly written with any other person is not permitted.
-
-The penalties for such an offence may include negative marks, automatic failure of the course and
-possibly other academic discipline. Assignment submissions will be examined both automatically and
-manually for such submissions.
-
-Relevant scholarship authorities will be informed if students holding scholarships are involved in
-an incident of plagiarism or other misconduct.
-
-Do not provide or show your assignment work to any other person &mdash; apart from the teaching
-staff of COMP6080.
-
-If you knowingly provide or show your assignment work to another person for any reason, and work
-derived from it is submitted, you may be penalized, even if the work was submitted without your
-knowledge or consent.  This may apply even if your work is submitted by a third party unknown to
-you.
-
-Every time you make commits or pushes on this repository, you are acknowledging that the work you
-submit is your own work (as described above).
-
-As per the course outline, "Pairs will be required to contribute regularly to gitlab and in reasonably equal contributions as we still assess contributions individually (there is no blanket group mark assigned). Failure to do so may result in a loss of marks."
-
-If you are not working in a pair, we still strongly encourage you to commit small amounts of code regularly. This will assist you in managing any allegations of plagiarism that you feel are not correct.
-
-Note you will not be penalized if your work has the potential to be taken without your consent or
-knowledge.
-
-## 8. Submission
-
-This assignment is due *Monday 27th of March, 10am*.
-
-To submit your assignment, you must complete the following two steps in order:
- * Ensure you've pushed all of your code to your gitlab master branch. You can check if you've done this properly by seeing what code is on the gitlab site on your master branch.
- 
-This will submit the latest commit on master as your submission.
-
-You do NOT have to run a submit command for this assignment (we are experimenting with not using the command).
-
-It is your responsibiltiy to ensure that your code can run successfully when cloned fresh from Gitlab.
-
-For pairs, only one team member needs to submit.
-
-## 8. Late Submission Policy
-
-No late submission are accepted.
